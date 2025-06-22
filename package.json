@@ -1,0 +1,11 @@
+{
+  "name": "keep-up",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "scripts": {
+    "start": "concurrently -n BACKEND,FRONTEND -c blue,green \"npm run dev --prefix server\" \"npm run start --prefix client\""
+  }
+}
