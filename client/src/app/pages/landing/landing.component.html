@@ -1,0 +1,51 @@
+<div class="greetings-container">
+  <div class="greetings-box">
+    <form class="input-container" [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Example@domain.com"
+          autocomplete="username"
+        />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          type="password"
+          matInput
+          placeholder="Example123!"
+          autocomplete="current-password"
+        />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint
+          >6 characters, 1 number, 1 uppercase, 1 special character</mat-hint
+        >
+      </mat-form-field>
+    </form>
+
+    <div class="button-wrapper">
+      <button
+        class="google-button"
+        mat-raised-button
+        color="accent"
+        (click)="googleEmitter.emit()"
+      >
+        <mat-icon>account_circle</mat-icon>
+        Sign in with Google
+      </button>
+
+      <button mat-button color="primary" (click)="signupEmitter.emit()">
+        Sign up
+      </button>
+
+      <button mat-button color="primary" (click)="loginEmitter.emit()">
+        Login
+      </button>
+    </div>
+  </div>
+</div>

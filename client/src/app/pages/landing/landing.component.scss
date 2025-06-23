@@ -1,0 +1,34 @@
+.greetings-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .greetings-box {
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 600px;
+    background-color: rgb(255 255 255 / 10%);
+    backdrop-filter: blur(25px);
+    color: var(--mat-sys-on-background);
+    border-radius: 10px;
+    box-shadow: var(--mat-sys-level4);
+    overflow: auto;
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .button-wrapper {
+      display: flex;
+
+      .google-button {
+        margin-right: auto;
+      }
+    }
+  }
+}
